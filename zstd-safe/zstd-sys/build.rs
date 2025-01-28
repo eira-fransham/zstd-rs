@@ -162,6 +162,7 @@ fn compile_zstd() {
     config.warnings(false);
 
     config.define("ZSTD_LIB_DEPRECATED", Some("0"));
+    config.define("ZSTD_NO_INTRINSICS", Some(""));
 
     config
         .flag_if_supported("-ffunction-sections")
